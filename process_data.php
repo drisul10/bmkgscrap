@@ -51,7 +51,7 @@ function generate_query($content)
 {
     global $header;
 
-    return "INSERT INTO datascap (bujur, lintang, kepercayaan, region, provinsi, kabupaten, kecamatan, satelit, tanggal, waktu)
+    return "INSERT INTO datascrap (bujur, lintang, kepercayaan, region, provinsi, kabupaten, kecamatan, satelit, tanggal, waktu)
             VALUES ('" . $content[$header[0]] . "',
             '" . $content[$header[1]] . "',
             '" . $content[$header[2]] . "',

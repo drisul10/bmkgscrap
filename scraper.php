@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 require_once 'simplehtmldom/simple_html_dom.php';
 require_once 'process_data.php';
 
@@ -13,8 +14,8 @@ foreach ($html->find('strong') as $key => $value) {
 
         $file_name = basename($url_to_download);
 
-        if (file_put_contents($file_name, file_get_contents($url_to_download))) {
-            fmt_txt2array($file_name);
+        if (file_put_contents('data/'.$file_name, file_get_contents($url_to_download))) {
+            fmt_txt2array('data/'.$file_name);
         } else {
             // echo "File downloading failed." . "<br>";
         }
